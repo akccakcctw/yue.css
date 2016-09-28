@@ -1,0 +1,54 @@
+// font-family ==========
+$font_base: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+$font_base-2:"Georgia", "SimSun", sans-serif;
+$font_heading:"Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
+$font_code: Menlo, Monaco, Consolas, "Courier New", monospace;
+$font_pre:Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// font-size ==========
+$fz_base: 18px;
+$fz_base-2: 16px;
+$fz_h1:1.8em;
+$fz_h1-2:2em;
+$fz_h2:1.5em;
+$fz_h3:1.17em;
+$fz_h4:1em;
+$fz_h5:1em;
+$fz_h6:1em;
+$fz_figure:14px;
+$fz_code:0.96em;
+$fz_pre:0.96em;
+$fz_table:0.96em;
+
+
+// colors ==========
+$color_base: #444443;
+$color_background: rgba(0,0,0,0.2);
+$color_heading: #222223;
+$color_link:#111;
+$color_link-decoration:rgba(0,0,0,0.4);
+$color_link--hover:#555;
+$color_link-decoration--hover:rgba(0,0,0,0.6);
+$color_strong:#222223;
+$color_italic:#222223;
+$color_figure:#666665;
+$color_figure-link:#666665;
+$color_hr:#dededc;
+$color_blockquote:#666664;
+$color_blockquote-border:#dadada;
+$color_blockquote-link:#666664;
+$color_code:#808080;
+$color_code-background:#f9f9f7;
+$color_code-border:#dadada;
+$color_pre:#4c4c4c;
+$color_pre-border:#dadada;
+$color_pre-background:#f9f9f7;
+$color_pre-code:#4c4c4c;
+$color_table-border:#dadada;
+$color_table-background:#efefee;
+
+@mixin list($list-style-type) {
+	margin: 0 0 24px 6px;
+	padding-left: 16px;
+	list-style-type: $list-style-type;
+}

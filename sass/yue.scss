@@ -1,0 +1,274 @@
+/**
+ * yue.css
+ *
+ * yue.css is designed for readable content.
+ *
+ * Copyright (c) 2013 - 2014 by Hsiaoming Yang.
+ * Editor__2016__Rex Tsou
+ */
+
+@import "_var";
+@import "_base";
+.yue {
+    font: 400 $fz_base/1.62 $font_base;
+    color: $color_base;
+}
+
+.windows .yue {
+    font-size: $fz_base-2;
+    font-family: $font_base-2;
+}
+
+.yue::-moz-selection {
+    background-color: $color_background;
+}
+
+.yue::selection {
+    background-color: $color_background;
+}
+
+%heading {
+    font-family: $font_heading;
+    color: $color_heading;
+}
+
+%list_second-order {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 14px;
+}
+
+%table {
+    text-align: left;
+    padding: 4px 8px 4px 10px;
+    border: 1px solid $color_table-border;
+}
+
+.yue {
+    h1 {
+        @extend %heading;
+        font-size: $fz_h1;
+        margin: 0.67em 0;
+        a {
+            text-decoration: none;
+        }
+    }
+    >h1 {
+        margin-top: 0;
+        font-size: $fz_h1-2;
+    }
+    h2 {
+        @extend %heading;
+        font-size: $fz_h2;
+        margin: 0.83em 0;
+        a {
+            text-decoration: none;
+        }
+    }
+    h3 {
+        @extend %heading;
+        font-size: $fz_h3;
+        margin: 1em 0;
+        a {
+            text-decoration: none;
+        }
+    }
+    h4 {
+        @extend %heading;
+        font-size: $fz_h4;
+        margin: 1.6em 0 1em 0;
+    }
+    h5 {
+        @extend %heading;
+        font-size: $fz_h5;
+        margin: 1.6em 0 1em 0;
+    }
+    h6 {
+        @extend %heading;
+        font-size: $fz_h6;
+        margin: 1.6em 0 1em 0;
+        font-weight: 500;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 1.46em;
+    }
+    a {
+        color: $color_link;
+        word-wrap: break-word;
+        -moz-text-decoration-color: $color_link-decoration;
+        text-decoration-color: $color_link-decoration;
+        &:hover {
+            color: $color_link--hover;
+            -moz-text-decoration-color: $color_link-decoration--hover;
+            text-decoration-color: $color_link-decoration--hover;
+        }
+        img {
+            /* Remove border on IE */
+            border: none;
+        }
+    }
+    strong,
+    b {
+        font-weight: 700;
+        color: $color_strong;
+    }
+    em,
+    i {
+        font-style: italic;
+        color: $color_italic;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0.2em 0;
+    }
+    figure {
+        position: relative;
+        clear: both;
+        outline: 0;
+        margin: 10px 0 30px;
+        padding: 0;
+        min-height: 100px;
+        img {
+            display: block;
+            max-width: 100%;
+            margin: auto auto 4px;
+            box-sizing: border-box;
+        }
+        figcaption {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: $fz_figure;
+            color: $color_figure;
+            a {
+                text-decoration: none;
+                color: $color_figure-link;
+            }
+        }
+        iframe {
+            margin: auto;
+        }
+    }
+    hr {
+        display: block;
+        width: 14%;
+        margin: 40px auto 34px;
+        border: 0 none;
+        border-top: 3px solid $color_hr;
+    }
+    blockquote {
+        margin: 0 0 1.64em 0;
+        border-left: 3px solid $color_blockquote-border;
+        padding-left: 12px;
+        color: $color_blockquote;
+        a {
+            color: $color_blockquote-link;
+        }
+    }
+    ul {
+        @include list(square);
+    }
+    ol {
+        @include list(decimal);
+    }
+    li {
+        margin-bottom: 0.2em;
+        ul {
+            @extend %list_second-order;
+            list-style-type: disc;
+            ul {
+                list-style-type: circle;
+            }
+        }
+        ol {
+            @extend %list_second-order;
+        }
+        p {
+            margin: 0.4em 0 0.6em;
+        }
+    }
+    .unstyled {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    code,
+    tt {
+        color: $color_code;
+        font-size: $fz_code;
+        background-color: $color_code-background;
+        padding: 1px 2px;
+        border: 1px solid $color_code-border;
+        border-radius: 3px;
+        font-family: $font_code;
+        word-wrap: break-word;
+    }
+    pre {
+        margin: 1.64em 0;
+        padding: 7px;
+        border: none;
+        border-left: 3px solid $color_pre-border;
+        padding-left: 10px;
+        overflow: auto;
+        line-height: 1.5;
+        font-size: $fz_pre;
+        font-family: $font_pre;
+        color: $color_pre;
+        background-color: $color_pre-background;
+        code,
+        tt {
+            color: $color_pre-code;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+    }
+    table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 1.5em;
+        font-size: $fz_table;
+        box-sizing: border-box;
+        pre {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+    }
+    th {
+        @extend %table;
+    }
+    td {
+        @extend %table;
+        vertical-align: top;
+    }
+    tr:nth-child(even) {
+        background-color: $color_table-background;
+    }
+    iframe {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .yue {
+        blockquote {
+            margin-left: -24px;
+            padding-left: 20px;
+            border-width: 4px;
+            blockquote {
+                margin-left: 0;
+            }
+        }
+    }
+}
